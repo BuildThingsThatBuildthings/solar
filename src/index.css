@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+@import "tailwindcss";
+
+/* Custom theme configuration */
+@theme {
+  /* Rainbow palette colors */
+  --color-rainbow-red: #FF6B6B;
+  --color-rainbow-orange: #FF9F43;
+  --color-rainbow-yellow: #FECA57;
+  --color-rainbow-green: #5CD859;
+  --color-rainbow-teal: #48DBFB;
+  --color-rainbow-blue: #54A0FF;
+  --color-rainbow-indigo: #5F27CD;
+  --color-rainbow-purple: #A55EEA;
+  --color-rainbow-pink: #FF6B9D;
+
+  /* Space theme colors */
+  --color-space-dark: #0a0a1a;
+  --color-space-nebula: #1a0a2e;
+  --color-space-star: #ffffff;
+
+  /* Font family */
+  --font-family-fun: 'Comic Neue', cursive, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a1a2e 100%);
+}
+
+body {
+  font-family: 'Comic Neue', cursive, sans-serif;
+}
+
+/* Custom scrollbar for panels */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF6B6B, #A55EEA);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FF9F43, #5F27CD);
+}
+
+/* Rainbow text gradient utility */
+.text-rainbow {
+  background: linear-gradient(90deg, #FF6B6B, #FF9F43, #FECA57, #5CD859, #48DBFB, #54A0FF, #A55EEA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(254, 202, 87, 0.6), 0 0 40px rgba(254, 202, 87, 0.4);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(84, 160, 255, 0.6), 0 0 40px rgba(84, 160, 255, 0.4);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(165, 94, 234, 0.6), 0 0 40px rgba(165, 94, 234, 0.4);
+}
+
+/* Button hover bounce */
+.btn-bounce {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-bounce:hover {
+  transform: scale(1.05) translateY(-2px);
+}
+
+.btn-bounce:active {
+  transform: scale(0.98);
+}
+
+/* Panel flip animation base */
+.panel-flip {
+  perspective: 1000px;
+}
+
+.panel-flip-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
